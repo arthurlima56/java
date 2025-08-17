@@ -1,0 +1,29 @@
+/* Nesta linha de codigo vou fazer o calculo de mais ou menos a media de dias de uma pessoa viveu com base no ano de 
+e do ano atul nao sera correto estes dias mas sera aproximadamente e sera mais exato para quem nasceu no mes de 
+agosto que é o mes atual que estamos.
+*/
+
+
+import java.util.Scanner;
+
+public class DiasVividos {
+    public static void main(String[] args) {
+        
+        //variaveis
+        Scanner scanner = new Scanner(System.in);
+    
+        //entradas
+        System.out.print("Digite o ano de nascimento: ");
+        double anoNascimento = scanner.nextDouble();
+        System.out.print("Digite o ano atual: ");
+        double anoAtual = scanner.nextDouble();
+
+        // variaveis
+        double anosVividos = anoAtual - anoNascimento;
+        double diasVividos = anosVividos * 365;
+
+        // saida
+        System.out.println("Você viveu aproximadamente " + diasVividos + " dias até agora.");
+scanner.close();
+    }
+}
