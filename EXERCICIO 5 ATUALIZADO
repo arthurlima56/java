@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        double valorHora = 25.00;
+
+        // Entrada: quantidade de aulas semanais
+        System.out.print("Digite a quantidade de aulas semanais do professor: ");
+        int aulasSemanais = scanner.nextInt();
+
+        // Cálculo das aulas mensais
+        int aulasMensais = aulasSemanais * 4;
+
+        // Salário base
+        double salarioBase = aulasMensais * valorHora;
+
+        // Benefícios
+        double beneficios10 = salarioBase * 0.10; // vale alimentação + transporte
+        double planoSaude = salarioBase * 0.08;   // plano de saúde
+
+        // Salário bruto
+        double salarioBruto = salarioBase + beneficios10 + planoSaude;
+
+        // Descontos
+        double descontoIR = salarioBruto * 0.05;   // 5% IR
+        double descontoINSS = salarioBruto * 0.07; // 7% INSS
+
+        // Salário líquido
+        double salarioLiquido = salarioBruto - (descontoIR + descontoINSS);
+
+        // Saída detalhada
+        System.out.println("\n===== INFORMAÇÕES SALARIAIS =====");
+        System.out.println("Aulas semanais: " + aulasSemanais);
+        System.out.println("Salário base mensal: R$ " + salarioBase);
+        System.out.println("Benefícios (10% alimentação/transporte + 8% plano saúde): R$ " + (beneficios10 + planoSaude));
+        System.out.println("Salário bruto: R$ " + salarioBruto);
+        System.out.println("Desconto IR (5%): R$ " + descontoIR);
+        System.out.println("Desconto INSS (7%): R$ " + descontoINSS);
+        System.out.println("Salário líquido: R$ " + salarioLiquido);
+
+        scanner.close();
+    }
+}
