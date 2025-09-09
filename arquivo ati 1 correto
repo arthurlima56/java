@@ -1,0 +1,24 @@
+/**
+ * Aplicação Java que percorre os números de 15 até 50
+ * e exibe o quadrado apenas dos números pares.
+ */
+public class QuadradosPares {
+
+    public static void main(String[] args) {
+
+        System.out.println("Quadrado dos números pares de 15 até 50:");
+        System.out.println("-----------------------------------------");
+
+        // Laço de 15 até 50
+        for (int numero = 15; numero <= 50; numero++) {
+
+            // Verifica se o número é par
+            if (numero % 2 == 0) {
+                int quadrado = numero * numero;
+                System.out.println("O quadrado de " + numero + " é: " + quadrado);
+            }
+        }
+
+        System.out.println("-----------------------------------------");
+        System.out.println("Fim da execução.");
+    }
