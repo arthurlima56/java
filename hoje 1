@@ -1,0 +1,22 @@
+/**
+ * Aplicação Java que percorre os números de 15 até 50
+ * e exibe o quadrado de cada número.
+ */
+public class QuadradosDeNumeros {
+
+    // Método principal da aplicação
+    public static void main(String[] args) {
+
+        System.out.println("Quadrado dos números de 15 até 50:");
+        System.out.println("-----------------------------------");
+
+        // Laço que percorre do 15 ao 50
+        for (int numero = 15; numero <= 50; numero++) {
+            int quadrado = numero * numero; // Calcula o quadrado
+            System.out.println("O quadrado de " + numero + " é: " + quadrado);
+        }
+
+        System.out.println("-----------------------------------");
+        System.out.println("Fim da execução.");
+    }
+}
